@@ -32,16 +32,6 @@ Accurate solar power forecasting is essential for ensuring power grid stability,
 
 ---
 
-## 🧠 Methodology Overview
-
-
-    A[Raw Solar Plant Data] --> B[Preprocessing & Merge]
-    B --> C[Feature Engineering: Time & Weather]
-    C --> D[MinMax Scaling]
-    D --> E[Train-Test Split (80:20)]
-    E --> F[Random Forest Regressor]
-    F --> G[Prediction & Evaluation]
-````
 
 ---
 
