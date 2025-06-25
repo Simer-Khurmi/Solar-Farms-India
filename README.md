@@ -111,11 +111,7 @@ Accurate solar power forecasting is essential for ensuring power grid stability,
 
 ---
 
-## 👨‍💻 Authors
 
-* **Simer Khurmi** – B.Tech ECE, AI/ML, IGDTUW
-* ✉️ [simer.live@gmail.com](mailto:simer.live@gmail.com) | 📞 +91 9818933256
-* Co-authors: \[To be listed with affiliation]
 
 ---
 
