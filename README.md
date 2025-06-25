@@ -1,10 +1,4 @@
-Here is a **professional and journal-worthy `README.md`** file for your project titled:
 
-> **"A Time-Aware Random Forest Regression Model for High-Accuracy AC Power Forecasting in Indian Solar Farms"**
-
-This version is styled for **academic, GitHub, and research presentation**, with all critical content from your paper summarized effectively for reproducibility and showcasing.
-
----
 
 ````markdown
 # ☀️ A Time-Aware Random Forest Regression Model for High-Accuracy AC Power Forecasting in Indian Solar Farms
