@@ -1,9 +1,7 @@
 # Solar-Farms-India
-Here are two **journal-grade `README.md` files** for your GitHub repositories, tailored to:
 
----
 
-### ✅ **1. HTHTA-ViT++: Explainable Vision Transformer**
+
 
 ````markdown
 # 🔍 HTHTA-ViT++: An Explainable and Efficient Vision Transformer with Hierarchical GRU-Guided Token Attention
