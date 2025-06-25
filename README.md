@@ -116,15 +116,6 @@ Measured via Grad-CAM overlap:
 
 ---
 
-## 🧑‍💻 Authors
-
-* **Simer Khurmi**, IGDTUW – [simer.live@gmail.com](mailto:simer.live@gmail.com)
-* **Naincy Yadav**, IGDTUW
-* **Prisha Sharma**, IGDTUW
-* **Vidushi Arora**, IGDTUW
-* **Surbhi Bharti**, IGDTUW
-* **Dr. Ashwini Kumar**, IGDTUW
-
 ---
 
 ## 📄 License
@@ -206,24 +197,10 @@ It surpasses Swin and ConvNeXt in accuracy, improves interpretability via Focuse
 | + CLS Fusion (HTHTA-ViT++)  | 93.3              |
 
 ---
-
-## 🧑‍💻 Authors
-
-- **Simer Khurmi**, IGDTUW, Delhi  
-- Co-authors: Naincy Yadav, Prisha Sharma, Vidushi Arora, Surbhi Bharti, Dr. Ashwini Kumar
-
 ---
 
 ## 📄 Citation (BibTeX)
 
-```bibtex
-@article{khurmi2025hthtavit,
-  title={HTHTA-ViT++: An Explainable and Efficient Vision Transformer with Hierarchical GRU-Guided Token Attention},
-  author={Khurmi, Simer and Yadav, Naincy and Sharma, Prisha and Arora, Vidushi and Bharti, Surbhi and Kumar, Ashwini},
-  journal={Submitted to Springer Nature},
-  year={2025}
-}
-````
 
 ---
 
@@ -233,7 +210,3 @@ Licensed under the [MIT License](LICENSE).
 
 ```
 
----
-
-Would you like these two `README.md` files exported or formatted into a downloadable ZIP with image placeholders and `src/` directory structure?
-```
