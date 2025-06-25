@@ -1,180 +1,160 @@
-# Solar-Farms-India
+Here is a **professional and journal-worthy `README.md`** file for your project titled:
 
+> **"A Time-Aware Random Forest Regression Model for High-Accuracy AC Power Forecasting in Indian Solar Farms"**
 
+This version is styled for **academic, GitHub, and research presentation**, with all critical content from your paper summarized effectively for reproducibility and showcasing.
 
+---
 
 ````markdown
-# 🔍 HTHTA-ViT++: An Explainable and Efficient Vision Transformer with Hierarchical GRU-Guided Token Attention
+# ☀️ A Time-Aware Random Forest Regression Model for High-Accuracy AC Power Forecasting in Indian Solar Farms
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![ViT](https://img.shields.io/badge/Backbone-ViT--B/16-purple)
-![Status](https://img.shields.io/badge/Status-Preprint-green)
+![Python](https://img.shields.io/badge/Python-3.9-blue)
+![Machine Learning](https://img.shields.io/badge/MachineLearning-RandomForest-green)
+![Status](https://img.shields.io/badge/Status-Research%20Prototype-yellow)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-
-
-## 🧠 Abstract
-
-HTHTA-ViT++ integrates **Vision Transformers (ViT)** with a **Bidirectional GRU**, **interpretable attention pooling**, and **hierarchical CLS-token fusion** to enhance:
-- Sequential token modeling
-- Per-token attention visualizations
-- Classification performance
-
-It outperforms state-of-the-art models on multiple datasets including CIFAR-100 (+4.1%) and Tiny-ImageNet (+6.3%), while reducing FLOPs by 13%.
+> A robust and interpretable machine learning-based framework for forecasting AC power using time-series and meteorological data from Indian solar farms.
 
 ---
 
-## 🧩 Key Contributions
+## 📖 Abstract
 
-- ✅ **BiGRU Token Sequencing** for capturing spatial relationships between image patches
-- ✅ **Multi-head Attention Pooling** to visualize class-specific image regions
-- ✅ **CLS Token Fusion** combining global and local cues
-- ✅ **Focused Attention Percentage (FAP)**: 78.3% (↑ over ViT-B/16 by +24.6%)
-- ✅ High interpretability with efficient computation (99.3M params)
+Accurate solar power forecasting is essential for ensuring power grid stability, energy market efficiency, and optimal resource scheduling—especially under India’s renewable energy expansion goals. This project proposes a **Time-Aware Random Forest Regression (RFR)** model using 15-minute resolution plant-level and sensor data to forecast **AC Power** with exceptionally low error rates:
 
----
-
-
-## 📊 Benchmark Results
-
-| Model           | CIFAR-10 | CIFAR-100 | Tiny-ImageNet | Intel    | Params (M) | FLOPs (G) |
-| --------------- | -------- | --------- | ------------- | -------- | ---------- | --------- |
-| ViT-B/16        | 96.5     | 84.6      | 76.8          | 93.1     | 86.0       | 17.6      |
-| ConvNeXt-B      | 98.1     | 89.2      | 82.6          | 95.8     | 88.6       | 15.4      |
-| **HTHTA-ViT++** | **98.7** | **93.3**  | **88.9**      | **97.9** | **99.3**   | **15.3**  |
+- 📉 **MAE**: `9.07e-05`
+- 📉 **RMSE**: `0.00048`
+- ✅ **Explained Variance Score (EVS)**: `0.99996`
 
 ---
 
-## 🧪 Datasets Used
+## 📌 Key Features
 
-* **CIFAR-10** (50k train / 10k test)
-* **CIFAR-100** (100 fine-grained classes)
-* **Tiny-ImageNet** (64×64 images, 200 classes)
-* **Intel Scene Classification** (6 scene types)
-
-
-## 🎯 Focused Attention Percentage (FAP)
-
-Measured via Grad-CAM overlap:
-
-* HTHTA-ViT++: **78.3%**
-* ViT-B/16: 53.7%
-* Swin-B: 61.2%
+- 🌤️ Uses weather sensor data (irradiation, module temperature) and PV generation logs (DC power, yield)
+- 📅 Extracts time-aware features (hour, day, month, weekday) for temporal learning
+- ⚙️ Integrates Random Forest with GridSearchCV for hyperparameter tuning and cross-validation
+- 🔍 Explains predictions with **feature importance** and **residual plots**
+- 🇮🇳 Trained on **real operational Indian solar plant datasets**
 
 ---
 
-## 🔬 Ablation on CIFAR-100
+## 🧠 Methodology Overview
 
-| Model Variant             | Accuracy (%) | FAP (%) |
-| ------------------------- | ------------ | ------- |
-| ViT-Base                  | 89.2         | 51.3    |
-| + BiGRU                   | 90.8 (+1.6)  | 63.1    |
-| + Attention Pooling       | 92.1 (+1.3)  | 72.4    |
-| + CLS Fusion (Full Model) | 93.3 (+1.2)  | 76.5    |
-
----
-
-## 🏁 Training Details
-
-* Optimizer: AdamW (LR: `2e-5`)
-* Batch Size: 32
-* Epochs: 30
-* Scheduler: Cosine Decay
-* Hardware: 4× A100 (FP16)
-
----
-
----
-
-## 📄 License
-
-This repository is released under the [MIT License](LICENSE).
-
+```mermaid
+graph TD
+    A[Raw Solar Plant Data] --> B[Preprocessing & Merge]
+    B --> C[Feature Engineering: Time & Weather]
+    C --> D[MinMax Scaling]
+    D --> E[Train-Test Split (80:20)]
+    E --> F[Random Forest Regressor]
+    F --> G[Prediction & Evaluation]
 ````
 
 ---
 
-### ✅ **2. Springer-LaTeX Style Adaptation (`HTHTA-ViT++`)**
+## 🗃️ Dataset Details
 
-Use this if you're aligning it with your **Springer/Nature manuscript** format:
-
-```markdown
-# 📚 HTHTA-ViT++: A Hierarchical Transformer-GRU Attention Framework for Interpretable and Efficient Vision Classification
-
-> 🧬 **A Springer-ready ViT-based deep learning model combining token sequence modeling (BiGRU), interpretable attention pooling, and hierarchical fusion for high-accuracy classification.**
+* **Generation Data**: `Plant_1_Generation_Data.csv`
+* **Weather Data**: `Plant_1_Weather_Sensor_Data.csv`
+* **Combined Records**: 68,774 entries with 15-min interval
+* **Merged on**: `PLANT_ID` and `DATE_TIME`
 
 ---
 
-## 🔎 Abstract
+## 🔬 Feature Engineering
 
-HTHTA-ViT++ integrates:
-
-- **ViT + BiGRU**: Bidirectional modeling of token sequences
-- **Multi-Head Attention Pooling**: Interpretable class-region weighting
-- **CLS-token Fusion**: Adaptive local-global feature aggregation
-
-It surpasses Swin and ConvNeXt in accuracy, improves interpretability via Focused Attention Percentage (FAP), and reduces compute by 13% compared to ViT-B/16.
-
----
-
-## 🧠 Key Contributions
-
-- 📘 Outperforms DeiT, Swin, ConvNeXt on CIFAR-100 and Tiny-ImageNet
-- 📈 Boosts classification accuracy by up to **+4.3%**
-- 🔍 FAP = **78.3%** (↑ 24.6% over ViT)
-- 🧠 Attention maps aligned with salient regions (verified via user study)
-- 🛠 Includes rigorous ablation and error analysis
+| Feature                           | Description                        |
+| --------------------------------- | ---------------------------------- |
+| `DC_POWER`                        | Direct current power output        |
+| `AC_POWER`                        | Target: AC power output (forecast) |
+| `IRRADIATION`                     | Solar radiation (W/m²)             |
+| `MODULE_TEMPERATURE`              | Temperature of PV modules          |
+| `HOUR`, `DAY`, `MONTH`, `WEEKDAY` | Time-aware cyclic features         |
 
 ---
 
-## 📊 Performance Summary
+## ⚙️ Model & Evaluation
 
-| Model         | Params | CIFAR-10 | CIFAR-100 | Tiny-ImageNet | FAP (%) |
-|---------------|--------|----------|-----------|----------------|---------|
-| ViT-B/16      | 86M    | 96.5     | 84.6      | 76.8           | 53.7    |
-| ConvNeXt-B    | 88.6M  | 98.1     | 89.2      | 82.6           | 61.2    |
-| **HTHTA-ViT++** | 99.3M | **98.7** | **93.3**  | **88.9**       | **78.3** |
+**Model Used**: `RandomForestRegressor`
+**Tuning Method**: `GridSearchCV`
+**Cross-Validation**: 5-Fold
+**Error Metrics**:
 
----
-
-## 🛠 Method Overview
-
-- 🔍 **BiGRU Layer**: Captures directional token dependencies
-- 🧠 **Multi-head Attention**: Learns interpretable token importance
-- 🧬 **CLS Fusion Equation**:  
-  `cfinal = γ·cCLS + (1−γ)·cpooled + β·(cCLS ⊙ cpooled)`
+| Metric | Value    |
+| ------ | -------- |
+| MAE    | 9.07e-05 |
+| RMSE   | 0.00048  |
+| MAPE   | 0.069%   |
+| EVS    | 0.99996  |
 
 ---
 
-## 🧪 Datasets
+## 📊 Results Summary
 
-- CIFAR-10 (10 categories, 32×32)
-- CIFAR-100 (100 fine-grained classes)
-- Tiny-ImageNet (64×64, 200 classes)
-- Intel Scene Classification (224×224)
-
----
-
-## 📈 Results Snapshot (Table 1 & 2 in Paper)
-
-| Variant                        | CIFAR-100 Acc (%) |
-|-------------------------------|-------------------|
-| ViT-B/16                      | 84.6              |
-| + BiGRU                      | 88.1              |
-| + Attention Pooling          | 90.7              |
-| + CLS Fusion (HTHTA-ViT++)  | 93.3              |
-
----
----
-
-## 📄 Citation (BibTeX)
-
+* ✅ **Superior Performance**: Outperformed Linear Regression, SVR, Decision Tree, and LSTM
+* ✅ **No Overfitting**: Residuals centered around zero
+* ✅ **Interpretability**: Feature importance confirms `DC_POWER` as most influential
+* ✅ **Robust**: Generalizes well across folds and metrics
 
 ---
 
-## 📝 License
+## 📈 Model Comparison Table
 
-Licensed under the [MIT License](LICENSE).
+| Model                    | MAE          | RMSE        | MAPE (%)  | EVS         | Overfit |
+| ------------------------ | ------------ | ----------- | --------- | ----------- | ------- |
+| Linear Regression        | 0.00143      | 0.00277     | 1.37      | 0.953       | Yes     |
+| Decision Tree            | 0.00089      | 0.00191     | 0.88      | 0.981       | Yes     |
+| SVR                      | 0.00041      | 0.00112     | 0.43      | 0.993       | No      |
+| LSTM                     | 0.00031      | 0.00096     | 0.28      | 0.995       | No      |
+| **Random Forest (Ours)** | **9.07e-05** | **0.00048** | **0.069** | **0.99996** | **No**  |
+
+---
+
+## 🧩 Visualizations (in `/figures/`)
+
+* 📈 `feature_importance.png`
+* 📊 `residual_plot.png`
+* 🔄 `actual_vs_predicted.png`
+
+---
+
+## 🔮 Future Scope
+
+* 🌍 Incorporate **spatial data** using Graph Neural Networks (GNNs)
+* 🔗 Integrate **satellite cloud cover & pollution data**
+* 🧠 Explore hybrid RFR + LSTM/Transformer models
+* ⚡ Edge-based deployment with compressed models
+* 📊 Build explainable AI dashboards with SHAP
+
+---
+
+## 👨‍💻 Authors
+
+* **Simer Khurmi** – B.Tech ECE, AI/ML, IGDTUW
+* ✉️ [simer.live@gmail.com](mailto:simer.live@gmail.com) | 📞 +91 9818933256
+* Co-authors: \[To be listed with affiliation]
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## ⭐ Star this repo
+
+If you find this work helpful, please consider ⭐ starring the repo to support further research in **sustainable AI for India** 🌱.
 
 ```
 
+---
+
+Let me know if you’d like:
+
+- A GitHub repository structure to go with this (e.g. `/src`, `/figures`, `/notebooks`, etc.)
+- A `.bib` citation file for IEEE/ACM paper linking
+- A formatted LaTeX version of the abstract or future work section
+
+Would you also like this exported as a ready-to-use `README.md` file with a GitHub-style preview?
+```
