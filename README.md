@@ -52,20 +52,6 @@ It outperforms state-of-the-art models on multiple datasets including CIFAR-100 
 * **Tiny-ImageNet** (64×64 images, 200 classes)
 * **Intel Scene Classification** (6 scene types)
 
----
-
-## 🧠 Attention Pooling Formula
-
-```python
-ei,j = vTj * tanh(Wj * hi + bj)
-αi,j = softmax(ei,j)
-cj = Σ αi,j * hi
-```
-
-* `hi`: BiGRU output
-* `cj`: attention vector per head `j`
-
----
 
 ## 🎯 Focused Attention Percentage (FAP)
 
