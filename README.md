@@ -34,20 +34,6 @@ It outperforms state-of-the-art models on multiple datasets including CIFAR-100 
 
 ---
 
-## 🗂 Architecture Overview
-
-```mermaid
-graph TD
-    A[Input Image (224×224)] --> B[ViT Patch Embedding]
-    B --> C[Transformer Encoder]
-    C --> D[BiGRU Token Sequencer]
-    D --> E[Multi-Head Attention Pooling]
-    E --> F[Hierarchical CLS-Token Fusion]
-    F --> G[Classifier Head]
-    G --> H[Prediction]
-````
-
----
 
 ## 📊 Benchmark Results
 
