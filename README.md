@@ -11,9 +11,7 @@
 ![Status](https://img.shields.io/badge/Status-Preprint-green)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-> **A novel ViT-based hybrid architecture using BiGRU + attention pooling + CLS-fusion to improve interpretability and accuracy on real-world image datasets.**
 
----
 
 ## 🧠 Abstract
 
